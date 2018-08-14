@@ -1,14 +1,18 @@
 export default class textEditorController {
   constructor(
 		$scope,
-		$compile
+		$compile,
+		TextEditor
   ) {
 		'ngInject'
-		this.$scope = $scope
-		this.$compile = $compile
-  }
+		this.$scope = $scope;
+		this.$compile = $compile;
+		this.TextEditor = TextEditor;
+	}
+	
 
 	triggerAction(action) {
+		this.TextEditor.isEditingComponent = true
 		let elmt = $('.text-editor_active-action')
 		let tag = `editor-${action.toLowerCase()}`
 		elmt.append(`<editor-${action.toLowerCase()}></editor-${action.toLowerCase()}>`)

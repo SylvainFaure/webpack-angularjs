@@ -2,6 +2,7 @@
 
 body {
   background-color: slategrey;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .back {
@@ -10,6 +11,27 @@ body {
   background: url('./assets/andrew-neel-133200-2-unsplash.jpg') center;
 }
 
+
+
+/* TEXT EDITOR */
+.custom-btn {
+  background-color: transparent;
+  border: 2px black solid;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: black;
+    color: grey;
+    border: 2px solid grey;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
 
 
 .action-button {
@@ -36,15 +58,41 @@ body {
 }
 
 .text-editor {
+  
   &_container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
   }
   &_action-buttons {
+    transition: all 0.2s ease;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin: 0 5px;
     
+  }
+}
+
+.editor-title {
+  transition: all 0.2s ease;
+  &_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & h3 {
+      margin: 0;
+    }
+  }
+  &_content {
+    font-size: 2em;
+    margin: 10px;
+    padding: 10px;
+    
+    //background-color: rgba(0,0,0,0.1);
+    border: 0;
+    border-radius: 10px;
+    outline: 0px;
   }
 }

@@ -26,6 +26,7 @@ import ngSanitizeModuleName from 'angular-sanitize';
 
 // Internal Services
 import Articles from 'services/Articles';
+import TextEditor from 'services/TextEditor';
 
 // Config, routes
 import Router from './app.route';
@@ -41,6 +42,7 @@ const dependencies = [
 
 angular.module('myApp', dependencies)
   .service('Articles', Articles)
+  .service('TextEditor', TextEditor)
   .controller('HomeController', HomeController)
   .controller('CountryController', CountryController)
   .component('textEditor', textEditor.textEditorComponent)

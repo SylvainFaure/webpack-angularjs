@@ -2,14 +2,19 @@
   <!--<div class="action-button text-editor_edit-button">
     <div>Add something</div>
   </div>-->
-  <div class="text-editor_action-buttons">
+  <div ng-show="!vm.TextEditor.isEditingComponent" class="text-editor_action-buttons">
     <div 
       class="action-button" 
       ng-repeat="action in vm.actions"
-      ng-click="vm.triggerAction(action.label)">
+      ng-click="vm.triggerAction(action.label)"
+      >
         {{action.label}} 
         <i class="fa fa-{{action.icon}}"></i>
     </div>
   </div>
   <div class="text-editor_active-action"></div>
+</div>
+
+<div ng-if="vm.TextEditor.title" class="title">
+  {{vm.TextEditor.title}}
 </div>
