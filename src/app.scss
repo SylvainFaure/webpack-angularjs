@@ -75,7 +75,7 @@ body {
   }
 }
 
-.editor-title {
+.editor-comp {
   transition: all 0.2s ease;
   &_container {
     display: flex;
@@ -84,9 +84,14 @@ body {
     & h3 {
       margin: 0;
     }
+    .title-content {
+      font-size: 2em;
+    }
+    .paragraph-content {
+      max-width: 25%;
+    }
   }
   &_content {
-    font-size: 2em;
     margin: 10px;
     padding: 10px;
     
@@ -94,5 +99,33 @@ body {
     border: 0;
     border-radius: 10px;
     outline: 0px;
+  }
+  &_actions {
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    background-color: black;
+    &-btn {
+      padding: 5px;
+      margin: 5px;
+      color: lightgrey;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      //clip: rect(10px 20px 20px 0);
+      margin-left: -10px;
+      transform: rotate(45deg) scale(.5);
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: black;
+    }
+
   }
 }

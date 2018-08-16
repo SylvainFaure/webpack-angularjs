@@ -15,7 +15,7 @@ import CountryController from "./controllers/country.controller"
 
 //Components
 import * as textEditor from './components/text-editor/text-editor';
-import * as editorTitle from './components/editor-title/editor-title'
+import * as editorComp from './components/editor-comp/editor-comp'
 
 
 
@@ -46,5 +46,5 @@ angular.module('myApp', dependencies)
   .controller('HomeController', HomeController)
   .controller('CountryController', CountryController)
   .component('textEditor', textEditor.textEditorComponent)
-  .component('editorTitle', editorTitle.editorTitleComponent)
+  .component('editorComp', editorComp.editorCompComponent)
   .config(Router)

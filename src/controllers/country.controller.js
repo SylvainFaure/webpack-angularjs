@@ -14,7 +14,7 @@ class CountryController {
         icon: 'font'
       },
       {
-        label : 'Subtitle',
+        label : 'Paragraph',
         icon: 'align-center'
       },
       {
