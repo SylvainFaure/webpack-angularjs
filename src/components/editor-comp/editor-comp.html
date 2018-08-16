@@ -1,0 +1,29 @@
+<div class="editor-comp_container">
+  <div 
+    ng-keyup="vm.getContent($event)"
+    ng-paste="vm.getContent($event)"
+    tabindex="0" 
+    class="editor-comp_content {{vm.type}}-content" 
+    contenteditable="true"></div>
+  <div>
+    <button 
+      ng-click="vm.addContent()"
+      class="custom-btn">Add</button>
+    <button 
+      ng-click="vm.destroyComponent()"
+      class="custom-btn">Cancel</button>
+  </div>
+
+  <div 
+    class="editor-comp_actions"
+    style="">
+    <div 
+      ng-repeat="action in vm.actions" 
+      class="editor-comp_actions-btn"
+      ng-click="vm.execAction(action)">
+      <i class="fa fa-{{action}}"></i>
+    </div>
+  
+    <div class="editor-comp_actions-arrow"></div>
+  </div>
+</div>
